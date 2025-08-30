@@ -1,12 +1,16 @@
 fileFormatVersion: 2
+
 guid: aae2ffa60cd3c764982ebc2f034b5f0f
+
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
+
     enableMipMap: 0
+
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,6 +41,7 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
+
     wrapU: 1
     wrapV: 1
     wrapW: 0
@@ -44,6 +49,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
+
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +58,11 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
+
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
+
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -106,6 +114,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -323,12 +332,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 701005df7c375a046b0b77b75a36aa7e
+
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+
     nameFileIdTable:
       ResearchTable_0: -1363740974
       ResearchTable_1: 1734850669
@@ -340,6 +351,7 @@ TextureImporter:
       ResearchTable_7: -9788977
       ResearchTable_8: 63185603
       ResearchTable_9: 1235934396
+
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

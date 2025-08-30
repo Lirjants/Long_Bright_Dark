@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+
 
 [CreateAssetMenu(fileName = "NewEvent", menuName = "LongBrightDark/Event")]
 public class GameEvent : ScriptableObject
@@ -9,6 +11,9 @@ public class GameEvent : ScriptableObject
     public float healthChange;
     public float sanityChange;
     public float electricityChange;
+    
+
+  
 
 
 
@@ -19,6 +24,7 @@ public class GameEvent : ScriptableObject
     public float maxSanity = 999f;
     public float minElectricity = 0f;
     public float maxElectricity = 999f;
+
 
 
     public bool RequirementsMet(Stats player)

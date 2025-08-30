@@ -25,6 +25,9 @@ public class Stats : MonoBehaviour
     public Image electricityBarFiller;
     public Image foodBarFiller;
 
+    public bool IsDead => currentHealth <= 0;
+
+
 
     public enum ElectricityUse
     {
@@ -44,8 +47,9 @@ public class Stats : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
-    void Start()
+  
+
+    void Awake()
     {
         currentHealth = maxHealth;
         currentSanity = maxSanity;
@@ -71,6 +75,7 @@ public class Stats : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            
         }
 
         healthBarFiller.fillAmount = currentHealth / maxHealth;
@@ -112,6 +117,7 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died");
+        
     }
 }
 

@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using static Stats;
 
 public class Timer : MonoBehaviour
 {
-    public int currentDay = 1;
+    public int currentDay = 0;
+    public int survivalDaysToWin = 14;
+    private bool isGameOver = false;
+
 
     [Header("Daily Effects")]
     public float healthLossPerDay = -5f;
@@ -15,6 +20,20 @@ public class Timer : MonoBehaviour
 
     public Stats playerStats;
     private DayPhase currentPhase = DayPhase.StartOfDay;
+
+
+
+    [Header("UI References")]
+    public Button exerciseButton;
+    public Button farmButton;
+    public Button projectButton;
+    public TextMeshProUGUI eventText;
+    public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI endGameText;
+
+
+
+
 
 
 
@@ -38,6 +57,10 @@ public class Timer : MonoBehaviour
     void Start()
     {
         playerStats = FindObjectOfType<Stats>();
+        BeginNextDay();
+
+       
+
 
     }
 
@@ -45,22 +68,64 @@ public class Timer : MonoBehaviour
     public ElectricityUse electricityUse = ElectricityUse.Medium;
     public FoodUse foodUse = FoodUse.Normal;
 
-    public void EndDay()
+
+
+    private void BeginNextDay()
     {
-        if (currentPhase != DayPhase.StartOfDay) return; // only valid at start
-        currentDay++;
-        Debug.Log("Day " + currentDay + " begins!");
 
-        // Step 1: Apply consumption
-        ApplyDailyConsumption();
+        if (isGameOver) return;
+        if (currentDay > survivalDaysToWin)
+        {
+            TriggerVictory();
+            return;
+        }
+        currentPhase = DayPhase.StartOfDay;
 
-        // Step 2: Trigger daily event
+        Debug.Log($"Day {currentDay} begins!");
+
+        // Only apply daily consumption if currentDay > 1
+        if (currentDay > 1)
+            ApplyDailyConsumption();
+        if (playerStats.IsDead)
+        {
+            TriggerGameOver();
+            return;
+        }
+
         TriggerEvent();
 
-        // Move into free-time phase
         currentPhase = DayPhase.FreeTimePhase;
         Debug.Log("Choose your free time activity...");
+
+        UpdateUIButtons();
     }
+
+    private void TriggerVictory()
+    {
+        isGameOver = true;
+        Debug.Log("YOU SURVIVED! Victory!");
+        if (endGameText != null)
+            endGameText.text = "YOU SURVIVED!\nYou lasted until rescue arrived.";
+        UpdateUIButtons(); // Disable buttons
+    }
+
+    private void TriggerGameOver()
+    {
+        isGameOver = true;
+        Debug.Log("Game Over! You died.");
+        if (gameOverText != null)
+            gameOverText.text = "GAME OVER\nYou did not survive.";
+        UpdateUIButtons(); // Disable buttons
+    }
+
+    public void EndDay() // called after free-time activity
+    {
+        currentPhase = DayPhase.DayComplete;
+        Debug.Log($"Day {currentDay} is complete.");
+        currentDay++;
+        BeginNextDay(); // immediately start next day
+    }
+
 
 
     private void ApplyDailyConsumption()
@@ -160,6 +225,12 @@ public class Timer : MonoBehaviour
 
     private void TriggerEvent()
     {
+
+        if (playerStats.IsDead)
+        {
+            TriggerGameOver();
+            return;
+        }
         // Find all valid events
         List<GameEvent> validEvents = new List<GameEvent>();
         foreach (var e in possibleEvents)
@@ -182,37 +253,48 @@ public class Timer : MonoBehaviour
 
         Debug.Log("Event: " + chosenEvent.description);
         chosenEvent.ApplyEvent(playerStats);
+        eventText.text = chosenEvent.description;   
     }
 
     public void DoExercise()
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
+
+        if (currentPhase != DayPhase.FreeTimePhase) return;
         playerStats.ModifySanity(+5f);
         Debug.Log("You exercised and feel a bit better.");
-        FinishDay();
+        EndDay();
+
     }
 
     public void DoFarm()
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
+
+        if (currentPhase != DayPhase.FreeTimePhase) return;
         playerStats.ModifyFood(+5f);
         Debug.Log("You farmed and got some food.");
-        FinishDay();
+        EndDay();
+
     }
 
     public void DoProject()
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
+
+        if (currentPhase != DayPhase.FreeTimePhase) return;
         Debug.Log("You worked on a project (effect TBD).");
-        FinishDay();
+        EndDay();
+
     }
 
-    private void FinishDay()
+  
+
+    private void UpdateUIButtons()
     {
-        currentPhase = DayPhase.DayComplete;
-        Debug.Log("Day " + currentDay + " is complete.");
-        // Reset for next cycle
-        currentPhase = DayPhase.StartOfDay;
+        if (exerciseButton != null) exerciseButton.interactable = (currentPhase == DayPhase.FreeTimePhase);
+        if (farmButton != null) farmButton.interactable = (currentPhase == DayPhase.FreeTimePhase);
+        if (projectButton != null) projectButton.interactable = (currentPhase == DayPhase.FreeTimePhase);
     }
 
 
