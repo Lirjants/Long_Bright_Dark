@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-
 guid: 26e497f0da0722944beb2d9b0fc4df1b
-
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-
     enableMipMap: 0
-
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -41,7 +37,6 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-
     wrapU: 1
     wrapV: 1
     wrapW: 0
@@ -49,7 +44,6 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,11 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -114,7 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 951909db321611b46ad74194a5288ba7
-      internalID: -1976704270
+      spriteID: 7ca1a20e30e69ab4888ae5ad1064e21f
+      internalID: 1939369841
       vertices: []
       indices: 
       edges: []
@@ -154,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50f55dd5c37ea5a47a3a06cf0fd92e61
-      internalID: -1138606570
+      spriteID: 706632cd3cffca547a7742ce10aba60f
+      internalID: -168854638
       vertices: []
       indices: 
       edges: []
@@ -175,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6bfc467097f9b7448545adfa1c9690f
-      internalID: 166525292
+      spriteID: 137ce444b5c784249b1263fb6b845128
+      internalID: 1214177245
       vertices: []
       indices: 
       edges: []
@@ -184,20 +175,17 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3941b2f59ba1c1041993cfb372e437a7
-
+    spriteID: ff51a5ec2a9dddf41816573086b65ec4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-
     nameFileIdTable:
-      ComputerLightStages_0: -1976704270
-      ComputerLightStages_1: -1138606570
-      ComputerLightStages_2: 166525292
-
+      ComputerLightStages_0: 1939369841
+      ComputerLightStages_1: -168854638
+      ComputerLightStages_2: 1214177245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
