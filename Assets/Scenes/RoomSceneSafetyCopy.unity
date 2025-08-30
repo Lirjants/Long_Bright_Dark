@@ -544,7 +544,6 @@ GameObject:
   - component: {fileID: 352320686}
   - component: {fileID: 352320685}
   - component: {fileID: 352320684}
-  - component: {fileID: 352320688}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -641,25 +640,6 @@ Transform:
   - {fileID: 354600572}
   m_Father: {fileID: 413411863}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &352320688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352320683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564afef9231e9ba48901f4eca4452435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lights:
-  - {fileID: 2098046500}
-  - {fileID: 1596296552}
-  - {fileID: 354600573}
-  spriteContainers:
-  - {fileID: 1909473694}
-  - {fileID: 600906721}
 --- !u!1 &354600571
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +856,6 @@ GameObject:
   - component: {fileID: 477820068}
   - component: {fileID: 477820070}
   - component: {fileID: 477820069}
-  - component: {fileID: 477820071}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1000,28 +979,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477820067}
   m_CullTransparentMesh: 1
---- !u!114 &477820071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477820067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ceab317253da8c389a3d05b29fb09d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  fullText: This is a much longer example sentence. It is designed to be longer than
-    the textbox to demonstrate the automatic pagination feature. When the text overflows,
-    the script will pause and wait for a mouse click before displaying the next part
-    of the text.This is a much longer example sentence. It is designed to be longer
-    than the textbox to demonstrate the automatic pagination feature. When the text
-    overflows, the script will pause and wait for a mouse click before displaying
-    the next part of the text.
-  delayBetweenWords: 0.05
-  continueIndicator: {fileID: 0}
 --- !u!1 &495476789
 GameObject:
   m_ObjectHideFlags: 0
