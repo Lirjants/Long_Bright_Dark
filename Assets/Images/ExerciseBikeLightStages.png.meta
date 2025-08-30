@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7663550834fd3c46b8345c807e10448
+guid: 488b817b84bab994890106ab6b891704
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI-sprites_0
+      name: ExerciseBikeLightStages_0
       rect:
         serializedVersion: 2
-        x: 243
-        y: 647
-        width: 1561
-        height: 365
+        x: 67
+        y: 70
+        width: 791
+        height: 1029
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27706105c95b79248bfff40f901a2507
-      internalID: -1662383705
+      spriteID: b156ac7b5610b3a48845cfe4fcc57765
+      internalID: -1422598531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-sprites_1
+      name: ExerciseBikeLightStages_1
       rect:
         serializedVersion: 2
-        x: 451
-        y: 539
-        width: 1144
-        height: 91
+        x: 2087
+        y: 70
+        width: 790
+        height: 1029
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2540551ba2b804498c7e820a42dbda9
-      internalID: -78904614
+      spriteID: 97b3348b38731214e86eeada450c9fee
+      internalID: -1911089740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-sprites_3
+      name: ExerciseBikeLightStages_2
       rect:
         serializedVersion: 2
-        x: 449
-        y: 431
-        width: 1149
-        height: 91
+        x: 4109
+        y: 70
+        width: 788
+        height: 1029
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffef20a5db343544d9df66d271da9df9
-      internalID: 372096376
+      spriteID: 4c9bcad051f6ace40bc08ca64c235cf4
+      internalID: 126290429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExerciseBikeLightStages_3
+      rect:
+        serializedVersion: 2
+        x: 6128
+        y: 70
+        width: 788
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d777bb81a269fc44f84e8caabc8d0afe
+      internalID: -597047629
       vertices: []
       indices: 
       edges: []
@@ -175,7 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 468eabea3040ecf49a1df3898c390728
     internalID: 0
     vertices: []
     indices: 
@@ -183,17 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI-sprites_0: -1662383705
-      UI-sprites_1: -78904614
-      UI-sprites_10: -1121841481
-      UI-sprites_2: -215491762
-      UI-sprites_3: 372096376
-      UI-sprites_4: -837067286
-      UI-sprites_5: -1923408632
-      UI-sprites_6: 1224941230
-      UI-sprites_7: -1515697550
-      UI-sprites_8: -22618464
-      UI-sprites_9: -1384093905
+      ExerciseBikeLightStages_0: -1422598531
+      ExerciseBikeLightStages_1: -1911089740
+      ExerciseBikeLightStages_2: 126290429
+      ExerciseBikeLightStages_3: -597047629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
