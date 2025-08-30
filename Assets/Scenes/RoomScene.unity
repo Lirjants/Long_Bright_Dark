@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -856,6 +856,7 @@ GameObject:
   - component: {fileID: 477820068}
   - component: {fileID: 477820070}
   - component: {fileID: 477820069}
+  - component: {fileID: 477820071}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -979,6 +980,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477820067}
   m_CullTransparentMesh: 1
+--- !u!114 &477820071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477820067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ceab317253da8c389a3d05b29fb09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 0}
+  fullText: This is a much longer example sentence. It is designed to be longer than
+    the textbox to demonstrate the automatic pagination feature. When the text overflows,
+    the script will pause and wait for a mouse click before displaying the next part
+    of the text.This is a much longer example sentence. It is designed to be longer
+    than the textbox to demonstrate the automatic pagination feature. When the text
+    overflows, the script will pause and wait for a mouse click before displaying
+    the next part of the text.
+  delayBetweenWords: 0.05
+  continueIndicator: {fileID: 0}
 --- !u!1 &495476789
 GameObject:
   m_ObjectHideFlags: 0
