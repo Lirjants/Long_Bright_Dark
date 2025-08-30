@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 
@@ -18,6 +19,11 @@ public class Stats : MonoBehaviour
     private float currentSanity;
     private float currentElectricity;
     private float currentFood;
+
+    public Image healthBarFiller;
+    public Image sanityBarFiller;
+    public Image electricityBarFiller;
+    public Image foodBarFiller;
 
 
     public enum ElectricityUse
@@ -66,24 +72,32 @@ public class Stats : MonoBehaviour
         {
             Die();
         }
+
+        healthBarFiller.fillAmount = currentHealth / maxHealth;
     }
 
     public void ModifySanity(float amount)
     {
         currentSanity = Mathf.Clamp(currentSanity + amount, 0, maxSanity);
         Debug.Log("Sanity: " + currentSanity);
+
+        sanityBarFiller.fillAmount = currentSanity / maxSanity;
     }
 
     public void ModifyElectricity(float amount)
     {
         currentElectricity = Mathf.Clamp(currentElectricity + amount, 0, maxElectricity);
         Debug.Log("Electricity: " + currentElectricity);
+
+        electricityBarFiller.fillAmount = currentElectricity / maxElectricity;
     }
 
     public void ModifyFood(float amount)
     {
         currentFood = Mathf.Clamp(currentFood + amount, 0, maxFood);
         Debug.Log("Food: " + currentFood);
+
+        foodBarFiller.fillAmount = currentFood / maxFood;
     }
 
     // Getters
