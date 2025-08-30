@@ -4,9 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static Stats;
+using static Textbox;
+
 
 public class Timer : MonoBehaviour
 {
+    
     public int currentDay = 0;
     public int survivalDaysToWin = 14;
     private bool isGameOver = false;
@@ -20,6 +23,7 @@ public class Timer : MonoBehaviour
 
     public Stats playerStats;
     public Projects _projects;
+    public Textbox _textbox;
 
     private DayPhase currentPhase = DayPhase.StartOfDay;
 
@@ -56,8 +60,11 @@ public class Timer : MonoBehaviour
 
     [Header("Events")]
     public List<GameEvent> possibleEvents = new List<GameEvent>();
+    
+
     void Start()
     {
+        
         playerStats = FindObjectOfType<Stats>();
         _projects = FindObjectOfType<Projects>();
 
