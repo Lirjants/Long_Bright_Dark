@@ -338,4 +338,15 @@ public class Timer : MonoBehaviour
     }
 
 
+    public void SetElectricityHigh() { electricityUse = ElectricityUse.High; Debug.Log("Electricity use set to HIGH"); }
+    public void SetElectricityMedium() { electricityUse = ElectricityUse.Medium; Debug.Log("Electricity use set to MEDIUM"); }
+    public void SetElectricityLow() { electricityUse = ElectricityUse.Low; Debug.Log("Electricity use set to LOW"); }
+    public void SetElectricityNone() { electricityUse = ElectricityUse.None; Debug.Log("Electricity use set to NONE"); }
+
+    public void SetFoodHigh() { foodUse = FoodUse.High; Debug.Log("Food use set to HIGH"); }
+    public void SetFoodNormal() { foodUse = FoodUse.Normal; Debug.Log("Food use set to NORMAL"); }
+    public void SetFoodLow() { foodUse = FoodUse.Low; Debug.Log("Food use set to LOW"); }
+    public void SetFoodNone() { foodUse = FoodUse.None; Debug.Log("Food use set to NONE"); }
+
+
 }
