@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: Garden Florishes
+  m_EditorClassIdentifier: 
+  description: "Well throw me a harvest festival and call me Demeter if my garden
+    isn\u2019t flowering like it\u2019s the most beautiful spring day you\u2019ve
+    ever seen. Plump tomatoes, vibrant corn and apples big enough they\u2019re straining
+    the branches. Them\u2019s good eating for a bit. "
+  healthChange: 0
+  sanityChange: 0
+  electricityChange: 0
+  foodChange: 0
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 70
+  maxSanity: 999
+  minElectricity: 0
+  maxElectricity: 999
+  minFood: 0
+  maxFood: 999

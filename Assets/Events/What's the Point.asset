@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: What's the Point
+  m_EditorClassIdentifier: 
+  description: "I\u2019m not getting up. What\u2019s the point. This day will be
+    exact the same as the last one. So was yesterday. So will be tomorrow. Things
+    don\u2019t change. Time flows into endless grey sludge of minutes, hours and
+    days. This will be another day wasted doing menial shit that doesn\u2019t affect
+    anything and that no-one will remember. Ever. Not even me. I\u2019m just gonna
+    lay the entire day in bed and feel bad for myself. I\u2019m sure that will solve
+    everything. "
+  healthChange: 0
+  sanityChange: 0
+  electricityChange: 0
+  foodChange: 0
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 0
+  maxSanity: 20
+  minElectricity: 0
+  maxElectricity: 20
+  minFood: 0
+  maxFood: 999
