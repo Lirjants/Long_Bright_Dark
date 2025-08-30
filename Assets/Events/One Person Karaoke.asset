@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: One Person Karaoke
+  m_EditorClassIdentifier: 
+  description: "In space, nobody can hear you scream your ears out. Just letting
+    it all out, the frustration, the loneliness, the rebel yell that has been building
+    in me for so long. Screaming into emptiness feels so damn good, especially when
+    you know there won\u2019t be any neighbours to complain "
+  healthChange: 0
+  sanityChange: 25
+  electricityChange: 0
+  foodChange: 0
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 0
+  maxSanity: 15
+  minElectricity: 0
+  maxElectricity: 999
+  minFood: 0
+  maxFood: 999

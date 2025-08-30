@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: Cookout
+  m_EditorClassIdentifier: 
+  description: "Having enough electricity to light up a small village isn\u2019t
+    that grand when you don\u2019t have anything to eat. We may have tamed the lightning
+    as species, but sadly we still can\u2019t sustain ourselves with it. But you
+    can overload an electric heater and have yourself an improvised barbecue. "
+  healthChange: 0
+  sanityChange: 0
+  electricityChange: 0
+  foodChange: 10
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 0
+  maxSanity: 999
+  minElectricity: 0
+  maxElectricity: 999
+  minFood: 0
+  maxFood: 20

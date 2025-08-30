@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: Message
+  m_EditorClassIdentifier: 
+  description: "Some bored scientist who knows how long ago scratched a message into
+    a wall. \u201CIn the infinite dark, YOU are someone\u2019s light.\u201D It\u2019s
+    simple, even bit corny. But there is something comforting in thinking about somebody
+    in the exact same situation as me, choosing to see the light. "
+  healthChange: 0
+  sanityChange: 15
+  electricityChange: 0
+  foodChange: 0
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 0
+  maxSanity: 999
+  minElectricity: 0
+  maxElectricity: 999
+  minFood: 0
+  maxFood: 999

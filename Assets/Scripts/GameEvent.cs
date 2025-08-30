@@ -11,6 +11,7 @@ public class GameEvent : ScriptableObject
     public float healthChange;
     public float sanityChange;
     public float electricityChange;
+    public float foodChange;
     
 
   
@@ -24,6 +25,8 @@ public class GameEvent : ScriptableObject
     public float maxSanity = 999f;
     public float minElectricity = 0f;
     public float maxElectricity = 999f;
+    public float minFood = 0f;
+    public float maxFood = 999f;
 
 
 
@@ -32,7 +35,8 @@ public class GameEvent : ScriptableObject
         return
             player.GetHealth() >= minHealth && player.GetHealth() <= maxHealth &&
             player.GetSanity() >= minSanity && player.GetSanity() <= maxSanity &&
-            player.GetElectricity() >= minElectricity && player.GetElectricity() <= maxElectricity;
+            player.GetElectricity() >= minElectricity && player.GetElectricity() <= maxElectricity &&
+            player.GetFood() >= minFood && player.GetFood() <= maxFood;
     }
 
 
@@ -43,6 +47,7 @@ public class GameEvent : ScriptableObject
             player.ModifyHealth(healthChange);
             player.ModifySanity(sanityChange);
             player.ModifyElectricity(electricityChange);
+            player.ModifyFood(foodChange);
 
         }
     }
