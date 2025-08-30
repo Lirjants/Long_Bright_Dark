@@ -296,7 +296,7 @@ public class Timer : MonoBehaviour
             _projects.electricalProject(30f);
         }
         Debug.Log("You finished your electrical project and got some electricity.");
-        FinishDay();
+        EndDay();
 
     }
     public void DoFarmingProject()
@@ -312,8 +312,8 @@ public class Timer : MonoBehaviour
         {
             _projects.farmingProject(30f);
         }
-        Debug.Log("You farmed and got some food.");
-        FinishDay();
+        Debug.Log("You worked on farming project.");
+        EndDay();
     }
 
     public void DoScienceProject()
@@ -326,7 +326,7 @@ public class Timer : MonoBehaviour
         }
         else  { _projects?.scienceProject(30f); }
         Debug.Log("You worked on the science project.");
-        FinishDay();
+        EndDay();
     }
   
 
