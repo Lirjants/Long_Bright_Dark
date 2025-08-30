@@ -19,6 +19,8 @@ public class Timer : MonoBehaviour
 
 
     public Stats playerStats;
+    public Projects _projects;
+
     private DayPhase currentPhase = DayPhase.StartOfDay;
 
 
@@ -57,6 +59,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         playerStats = FindObjectOfType<Stats>();
+        _projects = FindObjectOfType<Projects>();
+
         BeginNextDay();
 
        
@@ -278,16 +282,52 @@ public class Timer : MonoBehaviour
 
     }
 
-    public void DoProject()
+    public void DoElectricalProject()
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
+        if (_projects.electricalProgress >= 100f)
+        {
+            Debug.Log("Electrical project already completed.");
+            return;
+        }
 
-        if (currentPhase != DayPhase.FreeTimePhase) return;
-        Debug.Log("You worked on a project (effect TBD).");
-        EndDay();
+        else if (_projects != null)
+        {
+            _projects.electricalProject(30f);
+        }
+        Debug.Log("You finished your electrical project and got some electricity.");
+        FinishDay();
 
     }
+    public void DoFarmingProject()
+    {
+        if (currentPhase != DayPhase.FreeTimePhase) return;
+        if (_projects.farmingProgress >= 100f)
+        {
+            Debug.Log("Farming project already completed.");
+            return;
+        }
 
+        else if (_projects != null) 
+        {
+            _projects.farmingProject(30f);
+        }
+        Debug.Log("You farmed and got some food.");
+        FinishDay();
+    }
+
+    public void DoScienceProject()
+    {
+        if (currentPhase != DayPhase.FreeTimePhase) return;
+        if (_projects.scienceProgress >= 100f)
+        {
+            Debug.Log("Science project already completed.");
+            return;
+        }
+        else  { _projects?.scienceProject(30f); }
+        Debug.Log("You worked on the science project.");
+        FinishDay();
+    }
   
 
     private void UpdateUIButtons()
