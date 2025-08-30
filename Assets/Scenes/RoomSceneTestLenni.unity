@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -894,6 +894,8 @@ GameObject:
   - component: {fileID: 477820068}
   - component: {fileID: 477820070}
   - component: {fileID: 477820069}
+  - component: {fileID: 477820071}
+  - component: {fileID: 477820072}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1017,6 +1019,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477820067}
   m_CullTransparentMesh: 1
+--- !u!114 &477820071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477820067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68254bc0b083ed8a198c61c551435c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 0}
+  fullText: This is a much longer example sentence. It is designed to be longer than
+    the textbox to demonstrate the automatic pagination feature. When the text overflows,
+    the script will pause and wait for a mouse click before displaying the next part
+    of the text.
+  delayBetweenWords: 0.05
+  continueIndicator: {fileID: 0}
+--- !u!114 &477820072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477820067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11815c34e7fd7e9278c9c48fdcc405ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &495476789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,8 +2592,11 @@ MonoBehaviour:
   gameOverText: {fileID: 1299798588}
   endGameText: {fileID: 809300873}
   possibleEvents:
-  - {fileID: 11400000, guid: d6d6264a81f63824f9982e5744806d39, type: 2}
-  - {fileID: 11400000, guid: 2c86f80f88b063340baf76bee03867c5, type: 2}
+  - {fileID: 11400000, guid: a830aa144d967b5498d27be307a97a5f, type: 2}
+  - {fileID: 11400000, guid: 5f3eeb01aa8135341b05326180496293, type: 2}
+  - {fileID: 11400000, guid: cdad32b33dfae6243b8eafca569eb50a, type: 2}
+  - {fileID: 11400000, guid: 3010b7437ef58c64ead435c69a5bce21, type: 2}
+  - {fileID: 11400000, guid: f2652202ab1cccb4cbc62b52fa79ac2f, type: 2}
   electricityUse: 1
   foodUse: 1
 --- !u!114 &1531676750

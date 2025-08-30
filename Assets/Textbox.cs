@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using TMPro;
+    
 
-
-public class WordByWordDisplay : MonoBehaviour
+public class Textbox : MonoBehaviour
 {
     [Header("Text Settings")]
     [Tooltip("If left empty, this component will be fetched from the same GameObject.")]
@@ -13,9 +13,7 @@ public class WordByWordDisplay : MonoBehaviour
 
     [Tooltip("Default text for testing; you can call DisplayText() at runtime to show new text.")]
     [TextArea(5, 10)]
-    public string fullText =
-        "This is a much longer example sentence. It is designed to be longer than the textbox to demonstrate the automatic pagination feature. When the text overflows, the script will pause and wait for a mouse click before displaying the next part of the text.";
-
+    public string fullText = "";
     [Header("Typing Speed")]
     [Tooltip("Delay in seconds between each word.")]
     public float delayBetweenWords = 0.05f;
