@@ -293,11 +293,11 @@ public class Timer : MonoBehaviour
 
         else if (_projects != null)
         {
-            _projects.electricalProject(30f);
+            _projects.electricalProject(_projects.incrementamount);
         }
         Debug.Log("You finished your electrical project and got some electricity.");
         EndDay();
-
+        
     }
     public void DoFarmingProject()
     {
@@ -310,7 +310,7 @@ public class Timer : MonoBehaviour
 
         else if (_projects != null) 
         {
-            _projects.farmingProject(30f);
+            _projects.farmingProject(_projects.incrementamount);
         }
         Debug.Log("You worked on farming project.");
         EndDay();
@@ -324,7 +324,7 @@ public class Timer : MonoBehaviour
             Debug.Log("Science project already completed.");
             return;
         }
-        else  { _projects?.scienceProject(30f); }
+        else  { _projects?.scienceProject(_projects.incrementamount); }
         Debug.Log("You worked on the science project.");
         EndDay();
     }
