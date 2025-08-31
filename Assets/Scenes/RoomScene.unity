@@ -2709,6 +2709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDay: 1
   survivalDaysToWin: 14
+  introEvent: {fileID: 11400000, guid: 7d0cd1f9afa33744ba464a941c765c2b, type: 2}
   healthLossPerDay: -5
   sanityLossPerDay: -10
   electricityLossPerDay: -5

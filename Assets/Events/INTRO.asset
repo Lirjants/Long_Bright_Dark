@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354a3a84ed4c08438e29cb467cc004e, type: 3}
+  m_Name: INTRO
+  m_EditorClassIdentifier: 
+  description: "You never know how much you miss sunlight until it\u2019s gone. I
+    set on the research stations steps, watching as the long, bright dark set as
+    the last glimmering ray disappeared over horizon. The warm streak slowly climbed
+    across the spacesuit, until it reached my face. It felt like last touch of loved
+    one you wouldn\u2019t see in a while. For the next two weeks, it would be just
+    me, the old research station and the blackness. "
+  healthChange: 0
+  sanityChange: 0
+  electricityChange: 0
+  foodChange: 0
+  scienceProjectChange: 0
+  electricalProjectChange: 0
+  farmingProjectChange: 0
+  minHealth: 0
+  maxHealth: 999
+  minSanity: 0
+  maxSanity: 999
+  minElectricity: 0
+  maxElectricity: 999
+  minFood: 0
+  maxFood: 999

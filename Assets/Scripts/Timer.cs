@@ -15,6 +15,11 @@ public class Timer : MonoBehaviour
     private bool isGameOver = false;
 
 
+
+    [Header("Intro Event")]
+    public GameEvent introEvent;
+
+
     [Header("Daily Effects")]
     public float healthLossPerDay = -5f;
     public float sanityLossPerDay = -10f;
@@ -70,7 +75,7 @@ public class Timer : MonoBehaviour
 
         BeginNextDay();
 
-       
+
 
 
     }
@@ -96,14 +101,32 @@ public class Timer : MonoBehaviour
 
         // Only apply daily consumption if currentDay > 1
         if (currentDay > 1)
+        {
             ApplyDailyConsumption();
+            Debug.Log("Consumed");
+
+
+        }
         if (playerStats.IsDead)
         {
             TriggerGameOver();
             return;
         }
 
+        if (currentDay == 1 && introEvent != null)
+        {
+            Debug.Log("Intro Event triggered!");
+            introEvent.ApplyEvent(playerStats, _projects);
+            eventText.text = introEvent.description;
+            currentPhase = DayPhase.FreeTimePhase;
+            UpdateUIButtons();
+            return;
+        }
+
+
         TriggerEvent();
+        
+
 
         currentPhase = DayPhase.FreeTimePhase;
         Debug.Log("Choose your free time activity...");

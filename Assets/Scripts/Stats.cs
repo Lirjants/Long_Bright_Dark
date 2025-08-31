@@ -118,7 +118,8 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died");
-        
+        Time.timeScale = 0f;
+
     }
 }
 
