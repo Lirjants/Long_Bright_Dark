@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     public int survivalDaysToWin = 14;
     private bool isGameOver = false;
 
+    private int delay = 4000;
 
 
     [Header("Intro Event")]
@@ -342,7 +343,7 @@ public class Timer : MonoBehaviour
     }
 
     // Wait for 2 seconds (2000 milliseconds) so the player can read the text
-    await Task.Delay(2000);
+    await Task.Delay(delay);
 
     // Now, end the day
     EndDay();
@@ -367,7 +368,7 @@ public class Timer : MonoBehaviour
         }
 
         // Wait for 2 seconds (2000 milliseconds) so the player can read the text
-        await Task.Delay(2000);
+        await Task.Delay(delay);
 
         // Now, end the day
         EndDay();
@@ -392,7 +393,7 @@ public class Timer : MonoBehaviour
         }
 
         // Wait for 2 seconds (2000 milliseconds) so the player can read the text
-        await Task.Delay(2000);
+        await Task.Delay(delay);
 
         // Now, end the day
         EndDay();
