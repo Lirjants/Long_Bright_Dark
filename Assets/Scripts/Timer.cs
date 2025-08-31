@@ -20,6 +20,8 @@ public class Timer : MonoBehaviour
 
     [Header("Intro Event")]
     public GameEvent introEvent;
+    public GameEvent WinEvent;
+
 
 
     [Header("Daily Effects")]
@@ -96,6 +98,8 @@ public class Timer : MonoBehaviour
         if (isGameOver) return;
         if (currentDay > survivalDaysToWin)
         {
+            _textbox.DisplayText(WinEvent.description);
+
             TriggerVictory();
             return;
         }
@@ -418,5 +422,5 @@ public class Timer : MonoBehaviour
     public void SetFoodLow() { foodUse = FoodUse.Low; Debug.Log("Food use set to LOW"); }
     public void SetFoodNone() { foodUse = FoodUse.None; Debug.Log("Food use set to NONE"); }
 
-
+    
 }

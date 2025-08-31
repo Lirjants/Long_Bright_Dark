@@ -34,18 +34,18 @@ public class Stats : MonoBehaviour
 
     public enum ElectricityUse
     {
-        High,
-        Medium,
+        None,
         Low,
-        None
+        Medium,
+        High
     }
 
     public enum FoodUse
     {
-        High,
-        Normal,
+        None,
         Low,
-        None
+        Normal,
+        High
     }
 
 
