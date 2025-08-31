@@ -10,8 +10,8 @@ using static Textbox;
 
 public class Timer : MonoBehaviour
 {
-    
-    public int currentDay = 0;
+
+    public int currentDay =1 ;
     public int survivalDaysToWin = 14;
     private bool isGameOver = false;
 
@@ -107,7 +107,7 @@ public class Timer : MonoBehaviour
         if (currentDay > 1)
         {
             ApplyDailyConsumption();
-            Debug.Log("Consumed");
+            _textbox.DisplayText("Consumed");
 
 
         }
@@ -119,7 +119,7 @@ public class Timer : MonoBehaviour
 
         if (currentDay == 1 && introEvent != null)
         {
-            Debug.Log("Intro Event triggered!");
+            _textbox.DisplayText("Intro Event triggered!");
             introEvent.ApplyEvent(playerStats, _projects);
             //eventText.text = introEvent.description;
             _textbox.DisplayText(introEvent.description);
@@ -134,7 +134,7 @@ public class Timer : MonoBehaviour
 
 
         currentPhase = DayPhase.FreeTimePhase;
-        Debug.Log("Choose your free time activity...");
+        _textbox.DisplayText("Next day has begun. Choose your free time activity...");
 
         UpdateUIButtons();
     }
@@ -142,7 +142,7 @@ public class Timer : MonoBehaviour
     private void TriggerVictory()
     {
         isGameOver = true;
-        Debug.Log("YOU SURVIVED! Victory!");
+        _textbox.DisplayText("YOU SURVIVED! Victory!");
         if (endGameText != null)
             endGameText.text = "YOU SURVIVED!\nYou lasted until rescue arrived.";
         UpdateUIButtons(); // Disable buttons
@@ -153,7 +153,7 @@ public class Timer : MonoBehaviour
     private void TriggerGameOver()
     {
         isGameOver = true;
-        Debug.Log("Game Over! You died.");
+        _textbox.DisplayText("Game Over! You died.");
         if (gameOverText != null)
             gameOverText.text = "GAME OVER\nYou did not survive.";
         UpdateUIButtons(); // Disable buttons
@@ -162,7 +162,7 @@ public class Timer : MonoBehaviour
     public void EndDay() // called after free-time activity
     {
         currentPhase = DayPhase.DayComplete;
-        Debug.Log($"Day {currentDay} is complete.");
+        _textbox.DisplayText($"Day {currentDay} is complete.");
         currentDay++;
         BeginNextDay(); // immediately start next day
     }
@@ -182,7 +182,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough electricity for High use!");
+                    _textbox.DisplayText("Not enough electricity for High use!");
                 }
                 break;
 
@@ -194,7 +194,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough electricity for Medium use!");
+                    _textbox.DisplayText("Not enough electricity for Medium use!");
                 }
                 break;
 
@@ -206,7 +206,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough electricity for Low use!");
+                    _textbox.DisplayText("Not enough electricity for Low use!");
                 }
                 break;
 
@@ -228,7 +228,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough food for High use!");
+                    _textbox.DisplayText("Not enough food for High use!");
                 }
                 break;
 
@@ -240,7 +240,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough food for Normal use!");
+                    _textbox.DisplayText("Not enough food for Normal use!");
                 }
                 break;
 
@@ -252,7 +252,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Not enough food for Low use!");
+                    _textbox.DisplayText("Not enough food for Low use!");
                 }
                 break;
 
@@ -284,7 +284,7 @@ public class Timer : MonoBehaviour
 
         if (validEvents.Count == 0)
         {
-            Debug.Log("No valid events this day.");
+            _textbox.DisplayText("No valid events this day.");
             return;
         }
 
@@ -292,32 +292,33 @@ public class Timer : MonoBehaviour
         int index = Random.Range(0, validEvents.Count);
         GameEvent chosenEvent = validEvents[index];
 
-        Debug.Log("Event: " + chosenEvent.description);
+        _textbox.DisplayText("Event: " + chosenEvent.description);
         chosenEvent.ApplyEvent(playerStats, _projects);
         //eventText.text = chosenEvent.description;
         _textbox.DisplayText(chosenEvent.description);
     }
 
-    public void DoExercise()
-    {
+    public async  void DoExercise()
+    {       
         if (currentPhase != DayPhase.FreeTimePhase) return;
 
-        if (currentPhase != DayPhase.FreeTimePhase) return;
+
         playerStats.ModifySanity(+5f);
-        Debug.Log("You exercised and feel a bit better.");
         _textbox.DisplayText("You exercised and feel a bit better.");
+        await Task.Delay(delay);
         EndDay();
 
     }
 
-    public void DoFarm()
+    public async void DoFarm()
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
 
         if (currentPhase != DayPhase.FreeTimePhase) return;
         playerStats.ModifyFood(+5f);
-        Debug.Log("You farmed and got some food.");
-        _textbox.DisplayText("You farmed and got some food");
+        _textbox.DisplayText("You farmed and got some food.");
+        await Task.Delay(delay);
+
         EndDay();
 
     }
