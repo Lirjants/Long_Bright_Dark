@@ -28,6 +28,7 @@ public class Timer : MonoBehaviour
 
     public Stats playerStats;
     public Projects _projects;
+    public MusicManager music;
     public Textbox _textbox;
 
     private DayPhase currentPhase = DayPhase.StartOfDay;
@@ -117,7 +118,8 @@ public class Timer : MonoBehaviour
         {
             Debug.Log("Intro Event triggered!");
             introEvent.ApplyEvent(playerStats, _projects);
-            eventText.text = introEvent.description;
+            //eventText.text = introEvent.description;
+            _textbox.DisplayText(introEvent.description);
             currentPhase = DayPhase.FreeTimePhase;
             UpdateUIButtons();
             return;
@@ -141,6 +143,8 @@ public class Timer : MonoBehaviour
         if (endGameText != null)
             endGameText.text = "YOU SURVIVED!\nYou lasted until rescue arrived.";
         UpdateUIButtons(); // Disable buttons
+        music.StopMusic();
+        
     }
 
     private void TriggerGameOver()
@@ -287,7 +291,8 @@ public class Timer : MonoBehaviour
 
         Debug.Log("Event: " + chosenEvent.description);
         chosenEvent.ApplyEvent(playerStats, _projects);
-        eventText.text = chosenEvent.description;   
+        //eventText.text = chosenEvent.description;
+        _textbox.DisplayText(chosenEvent.description);
     }
 
     public void DoExercise()
@@ -297,6 +302,7 @@ public class Timer : MonoBehaviour
         if (currentPhase != DayPhase.FreeTimePhase) return;
         playerStats.ModifySanity(+5f);
         Debug.Log("You exercised and feel a bit better.");
+        _textbox.DisplayText("You exercised and feel a bit better.");
         EndDay();
 
     }
@@ -308,6 +314,7 @@ public class Timer : MonoBehaviour
         if (currentPhase != DayPhase.FreeTimePhase) return;
         playerStats.ModifyFood(+5f);
         Debug.Log("You farmed and got some food.");
+        _textbox.DisplayText("You farmed and got some food");
         EndDay();
 
     }
@@ -326,6 +333,8 @@ public class Timer : MonoBehaviour
             _projects.electricalProject(_projects.incrementamount);
         }
         Debug.Log("You finished your electrical project and got some electricity.");
+        _textbox.DisplayText("You finished your electrical project and got some electricity.");
+
         EndDay();
         
     }
@@ -343,6 +352,9 @@ public class Timer : MonoBehaviour
             _projects.farmingProject(_projects.incrementamount);
         }
         Debug.Log("You worked on farming project.");
+        _textbox.DisplayText("You worked on farming project.");
+
+
         EndDay();
     }
 
@@ -355,7 +367,10 @@ public class Timer : MonoBehaviour
             return;
         }
         else  { _projects?.scienceProject(_projects.incrementamount); }
+        _textbox.DisplayText("You worked on the science project.");
+
         Debug.Log("You worked on the science project.");
+
         EndDay();
     }
   

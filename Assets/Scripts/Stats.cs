@@ -25,6 +25,9 @@ public class Stats : MonoBehaviour
     public Image electricityBarFiller;
     public Image foodBarFiller;
 
+
+    public MusicManager music;
+
     public bool IsDead => currentHealth <= 0;
 
 
@@ -118,6 +121,7 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died");
+        music.StopMusic();
         Time.timeScale = 0f;
 
     }

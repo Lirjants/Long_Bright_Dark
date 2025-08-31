@@ -2583,7 +2583,8 @@ MonoBehaviour:
   electricityLossPerDay: -5
   playerStats: {fileID: 1531676750}
   _projects: {fileID: 1531676751}
-  _textbox: {fileID: 0}
+  music: {fileID: 0}
+  _textbox: {fileID: 477820072}
   exerciseButton: {fileID: 1347293531}
   farmButton: {fileID: 0}
   projectButton: {fileID: 0}
@@ -2596,6 +2597,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdad32b33dfae6243b8eafca569eb50a, type: 2}
   - {fileID: 11400000, guid: 3010b7437ef58c64ead435c69a5bce21, type: 2}
   - {fileID: 11400000, guid: f2652202ab1cccb4cbc62b52fa79ac2f, type: 2}
+  - {fileID: 11400000, guid: 9de2890e8a198934ea93deecd0f85585, type: 2}
+  - {fileID: 11400000, guid: a91b047be5c970f46a4d4aaa45b9bfe7, type: 2}
+  - {fileID: 11400000, guid: 2e6dbdb175b2de542a5bd5415db2bde2, type: 2}
+  - {fileID: 11400000, guid: 5e3ee8b2b591d384dbb9c08fa05e9a0f, type: 2}
   electricityUse: 1
   foodUse: 1
 --- !u!114 &1531676750
@@ -2618,6 +2623,7 @@ MonoBehaviour:
   sanityBarFiller: {fileID: 683192981}
   electricityBarFiller: {fileID: 1553086649}
   foodBarFiller: {fileID: 407742856}
+  music: {fileID: 0}
 --- !u!114 &1531676751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,7 +2656,7 @@ MonoBehaviour:
   current: 0
   aa: 
   playerStats: {fileID: 1531676750}
-  _textbox: {fileID: 0}
+  _textbox: {fileID: 477820072}
   scienceProjectName: Research Paper
   electricalProjectName: Stabilize Power Grid
   farmingProjectName: Greenhouse Upgrade

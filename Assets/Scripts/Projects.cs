@@ -300,6 +300,7 @@ public class Projects : MonoBehaviour
                     //aa = GetRandomProjectTextsInOrder(ScienceProjectTexts);
                     currentStepIndex = 0;
                     _textbox.DisplayText("Milestone reached (" + state.name + "): 25% - " + aa);
+                    Debug.Log("I'm here");
                     break;
                 case projectprogress.electrical:
                     if (playerStats != null) playerStats.ModifyElectricity(+10f);
@@ -311,6 +312,8 @@ public class Projects : MonoBehaviour
                     if (playerStats != null) playerStats.ModifyFood(+10f);
                     aa = StartNewRandomProject(FarmingProjectTexts);
                     _textbox.DisplayText("Milestone reached (" + state.name + "): 25% - " + aa);
+                    Debug.Log("I'm here");
+
                     break;
             }
         }
