@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,6 +45,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI endGameText;
 
 
+    public string aa = "";
 
 
 
@@ -319,61 +321,82 @@ public class Timer : MonoBehaviour
 
     }
 
-    public void DoElectricalProject()
+
+       public async void DoElectricalProject() // <-- Changed to async void
     {
-        if (currentPhase != DayPhase.FreeTimePhase) return;
-        if (_projects.electricalProgress >= 100f)
-        {
-            Debug.Log("Electrical project already completed.");
-            return;
-        }
+    if (currentPhase != DayPhase.FreeTimePhase) return;
 
-        else if (_projects != null)
-        {
-            _projects.electricalProject(_projects.incrementamount);
-        }
-        Debug.Log("You finished your electrical project and got some electricity.");
-        _textbox.DisplayText("You finished your electrical project and got some electricity.");
+    // First, disable buttons so the player can't click again while the delay runs
 
-        EndDay();
-        
+    if (_projects.farmingProgress >= 100f)
+    {
+        _textbox.DisplayText("The electrical project is already complete.");
     }
-    public void DoFarmingProject()
+    else if (_projects != null)
+    {
+        // I'm assuming your method returns the new progress percentage.
+        // Displaying just a number isn't very descriptive. Let's make a better message.
+        float newProgress = _projects.farmingProject(_projects.incrementamount);
+        _textbox.DisplayText($"You worked on the electrical project. Progress is now {newProgress}%.");
+        Debug.Log($"You worked on electrical project. Progress: {newProgress}%");
+    }
+
+    // Wait for 2 seconds (2000 milliseconds) so the player can read the text
+    await Task.Delay(2000);
+
+    // Now, end the day
+    EndDay();
+}
+    public async void DoFarmingProject() // <-- Changed to async void
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
+
+        // First, disable buttons so the player can't click again while the delay runs
+
         if (_projects.farmingProgress >= 100f)
         {
-            Debug.Log("Farming project already completed.");
-            return;
+            _textbox.DisplayText("The farming project is already complete.");
         }
-
-        else if (_projects != null) 
+        else if (_projects != null)
         {
-            _projects.farmingProject(_projects.incrementamount);
+            // I'm assuming your method returns the new progress percentage.
+            // Displaying just a number isn't very descriptive. Let's make a better message.
+            float newProgress = _projects.farmingProject(_projects.incrementamount);
+            _textbox.DisplayText($"You worked on the farming project. Progress is now {newProgress}%.");
+            Debug.Log($"You worked on farming project. Progress: {newProgress}%");
         }
-        Debug.Log("You worked on farming project.");
-        _textbox.DisplayText("You worked on farming project.");
 
+        // Wait for 2 seconds (2000 milliseconds) so the player can read the text
+        await Task.Delay(2000);
 
+        // Now, end the day
         EndDay();
     }
-
-    public void DoScienceProject()
+        public async void DoScienceProject() // <-- Changed to async void
     {
         if (currentPhase != DayPhase.FreeTimePhase) return;
-        if (_projects.scienceProgress >= 100f)
+
+        // First, disable buttons so the player can't click again while the delay runs
+
+        if (_projects.farmingProgress >= 100f)
         {
-            Debug.Log("Science project already completed.");
-            return;
+            _textbox.DisplayText("The science project is already complete.");
         }
-        else  { _projects?.scienceProject(_projects.incrementamount); }
-        _textbox.DisplayText("You worked on the science project.");
+        else if (_projects != null)
+        {
+            // I'm assuming your method returns the new progress percentage.
+            // Displaying just a number isn't very descriptive. Let's make a better message.
+            float newProgress = _projects.farmingProject(_projects.incrementamount);
+            _textbox.DisplayText($"You worked on the science project. Progress is now {newProgress}%.");
+            Debug.Log($"You worked on science project. Progress: {newProgress}%");
+        }
 
-        Debug.Log("You worked on the science project.");
+        // Wait for 2 seconds (2000 milliseconds) so the player can read the text
+        await Task.Delay(2000);
 
+        // Now, end the day
         EndDay();
     }
-  
 
     private void UpdateUIButtons()
     {

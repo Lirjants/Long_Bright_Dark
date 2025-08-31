@@ -286,7 +286,7 @@ public class Projects : MonoBehaviour
         return state.progress;
     }
 
-    void GrantMilestones(projectprogress type, ProjectState state)
+    string GrantMilestones(projectprogress type, ProjectState state)
     {
         // 25%
         if (!state.at25 && state.progress >= 25f)
@@ -299,22 +299,19 @@ public class Projects : MonoBehaviour
                     aa = StartNewRandomProject(ScienceProjectTexts);
                     //aa = GetRandomProjectTextsInOrder(ScienceProjectTexts);
                     currentStepIndex = 0;
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 25% - " + aa);
-                    Debug.Log("I'm here");
-                    break;
+                    return $"Milestone reached ({state.name}): 25% - {aa}";
+
                 case projectprogress.electrical:
                     if (playerStats != null) playerStats.ModifyElectricity(+10f);
                     //_textbox.DisplayText("Milestone reached (" + state.name + "): 25% - Minor power gain (+Electricity).");
                     aa = StartNewRandomProject(ElectricalProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 25% - " + aa);
-                    break;
+                    //_textbox.DisplayText
+                    return $"Milestone reached ({state.name}): 25% - {aa}";
                 case projectprogress.farming:
                     if (playerStats != null) playerStats.ModifyFood(+10f);
                     aa = StartNewRandomProject(FarmingProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 25% - " + aa);
-                    Debug.Log("I'm here");
-
-                    break;
+                    //_textbox.DisplayText
+                    return $"Milestone reached ({state.name}): 25% - {aa}";
             }
         }
 
@@ -327,21 +324,18 @@ public class Projects : MonoBehaviour
                 case projectprogress.science:
                     if (playerStats != null) playerStats.ModifySanity(+5f);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 50% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 50% - {aa}";
                 case projectprogress.electrical:
                     if (playerStats != null) playerStats.ModifyElectricity(+10f);
                     //_textbox.DisplayText("Milestone reached (" + state.name + "): 25% - Minor power gain (+Electricity).");
                     //aa = GetRandomProjectTextsInOrder(ElectricalProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 50% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 50% - {aa}";
                 case projectprogress.farming:
                     if (playerStats != null) playerStats.ModifyFood(+10f);
                     //aa = GetRandomProjectTextsInOrder(FarmingProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 50% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 50% - {aa}";
             }
         }
 
@@ -355,21 +349,18 @@ public class Projects : MonoBehaviour
                     if (playerStats != null) playerStats.ModifySanity(+5f);
                     //aa = GetRandomProjectTextsInOrder(ScienceProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 75% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 75% - {aa}";
                 case projectprogress.electrical:
                     if (playerStats != null) playerStats.ModifyElectricity(+10f);
                     //_textbox.DisplayText("Milestone reached (" + state.name + "): 25% - Minor power gain (+Electricity).");
-                   // aa = GetRandomProjectTextsInOrder(ElectricalProjectTexts);
+                    // aa = GetRandomProjectTextsInOrder(ElectricalProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 75% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 75% - {aa}";
                 case projectprogress.farming:
                     if (playerStats != null) playerStats.ModifyFood(+10f);
                     //aa = GetRandomProjectTextsInOrder(FarmingProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 75% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 75% - {aa}";
             }
         }
 
@@ -384,23 +375,21 @@ public class Projects : MonoBehaviour
                     if (playerStats != null) playerStats.ModifySanity(+5f);
                     //aa = GetRandomProjectTextsInOrder(ScienceProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 100% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 100% - {aa}";
                 case projectprogress.electrical:
                     if (playerStats != null) playerStats.ModifyElectricity(+10f);
                     //_textbox.DisplayText("Milestone reached (" + state.name + "): 25% - Minor power gain (+Electricity).");
                     //aa = GetRandomProjectTextsInOrder(ElectricalProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 100% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 100% - {aa}";
                 case projectprogress.farming:
                     if (playerStats != null) playerStats.ModifyFood(+10f);
                     //aa = GetRandomProjectTextsInOrder(FarmingProjectTexts);
                     aa = GetNextProjectStep();//GetRandomProjectTextsInOrder(ScienceProjectTexts);
-                    _textbox.DisplayText("Milestone reached (" + state.name + "): 100% - " + aa);
-                    break;
+                    return $"Milestone reached ({state.name}): 100% - {aa}";
             }
         }
+    return aa;
     }
 
     public void ModifyProjectProgress(projectprogress type, float amount)

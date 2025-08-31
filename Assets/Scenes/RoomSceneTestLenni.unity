@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2480,7 +2480,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1531676749}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: DoExercise
+        m_MethodName: DoFarmingProject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2591,6 +2591,7 @@ MonoBehaviour:
   eventText: {fileID: 477820069}
   gameOverText: {fileID: 1299798588}
   endGameText: {fileID: 809300873}
+  aa: 
   possibleEvents:
   - {fileID: 11400000, guid: a830aa144d967b5498d27be307a97a5f, type: 2}
   - {fileID: 11400000, guid: 5f3eeb01aa8135341b05326180496293, type: 2}
