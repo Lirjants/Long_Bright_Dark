@@ -422,5 +422,5 @@ public class Timer : MonoBehaviour
     public void SetFoodLow() { foodUse = FoodUse.Low; Debug.Log("Food use set to LOW"); }
     public void SetFoodNone() { foodUse = FoodUse.None; Debug.Log("Food use set to NONE"); }
 
-
+    
 }
