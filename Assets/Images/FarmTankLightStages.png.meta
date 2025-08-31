@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -121,18 +121,370 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FarmTankLightStages_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 4955
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b892fdbe7c26a9f6b10122dc024fd9a
+      internalID: -1645742403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_1
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 4947
+        width: 554
+        height: 1250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b051c088095cc8469dca329f7236a1c
+      internalID: -1192623005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_2
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 4946
+        width: 553
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ea86b454ab6416689905529126595d
+      internalID: -353364745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_3
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 4946
+        width: 551
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7028bd35a124f849a3b7e286010805
+      internalID: 491832251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 3311
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2006fb948109f4059035a3f9dd76f3a
+      internalID: 866345771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_5
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 3305
+        width: 554
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6ca28847303144bb2b8ee9a4c00ee8
+      internalID: -1301666043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_6
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 3305
+        width: 553
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427622057f6c6fc88b2c25754061e59d
+      internalID: -1924278921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_7
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 3305
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41560a958dfdf0a0aea9716d7a7eb84
+      internalID: 1602182300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1722
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71eca90e45614cfa2a7a26301e854b8b
+      internalID: 555794940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_9
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1722
+        width: 554
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693d86e89b201910e9ceed7141dc7bd0
+      internalID: 1959929141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_10
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 1722
+        width: 553
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b5b85c59d068c4784aadca5a306bf1
+      internalID: 1311439944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_11
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 1722
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2b87088ddeeecfe969f658db60b6a2
+      internalID: -25921800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 35
+        width: 551
+        height: 1248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9661cf6096cac4e1b768ed1f14d4cf6
+      internalID: -494134133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_13
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 32
+        width: 554
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2a55b084b1919b5b43097e4b06dbea
+      internalID: 712420289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_14
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 32
+        width: 553
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59539580d8cabe9799c0ebf1ad7734a5
+      internalID: -691597909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmTankLightStages_15
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 32
+        width: 551
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94177b9dbc4cdfbb934fe05bb313511
+      internalID: 403597795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 289ba3536c38e0032ae8fd7d22cc4ed5
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FarmTankLightStages_0: -1645742403
+      FarmTankLightStages_1: -1192623005
+      FarmTankLightStages_10: 1311439944
+      FarmTankLightStages_11: -25921800
+      FarmTankLightStages_12: -494134133
+      FarmTankLightStages_13: 712420289
+      FarmTankLightStages_14: -691597909
+      FarmTankLightStages_15: 403597795
+      FarmTankLightStages_2: -353364745
+      FarmTankLightStages_3: 491832251
+      FarmTankLightStages_4: 866345771
+      FarmTankLightStages_5: -1301666043
+      FarmTankLightStages_6: -1924278921
+      FarmTankLightStages_7: 1602182300
+      FarmTankLightStages_8: 555794940
+      FarmTankLightStages_9: 1959929141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
