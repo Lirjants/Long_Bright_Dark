@@ -18,7 +18,10 @@ public class ClickOnObjects : MonoBehaviour
         {
             case "Exercise": timer.DoExercise(); break;
             case "Farm": timer.DoFarm(); break;
-            case "Project": timer.DoElectricalProject(); break;
+            case "Electrical Project": timer.DoElectricalProject(); break;
+            case "Science Project": timer.DoScienceProject(); break;
+            case "Farming Project": timer.DoFarmingProject(); break;
+
             default: Debug.Log("Unknown action: " + actionName); break;
         }
     }
