@@ -1012,16 +1012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ceab317253da8c389a3d05b29fb09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  fullText: This is a much longer example sentence. It is designed to be longer than
-    the textbox to demonstrate the automatic pagination feature. When the text overflows,
-    the script will pause and wait for a mouse click before displaying the next part
-    of the text.This is a much longer example sentence. It is designed to be longer
-    than the textbox to demonstrate the automatic pagination feature. When the text
-    overflows, the script will pause and wait for a mouse click before displaying
-    the next part of the text.
-  delayBetweenWords: 0.05
-  continueIndicator: {fileID: 0}
 --- !u!1 &495476789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499113675}
   - component: {fileID: 499113676}
+  - component: {fileID: 499113677}
   m_Layer: 0
   m_Name: Lighting3
   m_TagString: Untagged
@@ -1209,6 +1200,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &499113677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499113674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90f1d889f4de3f4e9cfc4796b413fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &504367157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,6 +1444,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 600906722}
+  - component: {fileID: 600906723}
+  - component: {fileID: 600906724}
+  - component: {fileID: 600906726}
   m_Layer: 0
   m_Name: ExerciseBike
   m_TagString: Untagged
@@ -1466,6 +1473,83 @@ Transform:
   - {fileID: 499113675}
   m_Father: {fileID: 959832498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600906723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600906721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc302b554e0d3d48a7812d7f4aee706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1531676749}
+  actionName: Exercise
+--- !u!65 &600906724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600906721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7897015, y: 2.0473971, z: 1.5597754}
+  m_Center: {x: 3.7087994, y: 1.5540786, z: 3.2026196}
+--- !u!23 &600906726
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600906721}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &683192979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054248914}
   - component: {fileID: 1054248915}
+  - component: {fileID: 1054248916}
   m_Layer: 0
   m_Name: Lighting2
   m_TagString: Untagged
@@ -1847,6 +1932,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1054248916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054248913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90f1d889f4de3f4e9cfc4796b413fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1081853098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1081853099}
   - component: {fileID: 1081853100}
+  - component: {fileID: 1081853101}
   m_Layer: 0
   m_Name: Lighting0
   m_TagString: Untagged
@@ -1931,6 +2030,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1081853101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081853098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90f1d889f4de3f4e9cfc4796b413fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1155256203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254257430}
   - component: {fileID: 1254257431}
+  - component: {fileID: 1254257432}
   m_Layer: 0
   m_Name: Lighting1
   m_TagString: Untagged
@@ -2461,6 +2574,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1254257432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254257429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a90f1d889f4de3f4e9cfc4796b413fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1332370922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,6 +2714,7 @@ MonoBehaviour:
   electricityLossPerDay: -5
   playerStats: {fileID: 1531676750}
   _projects: {fileID: 0}
+  _textbox: {fileID: 0}
   exerciseButton: {fileID: 0}
   farmButton: {fileID: 0}
   projectButton: {fileID: 0}
@@ -2597,6 +2724,9 @@ MonoBehaviour:
   possibleEvents:
   - {fileID: 11400000, guid: d6d6264a81f63824f9982e5744806d39, type: 2}
   - {fileID: 11400000, guid: 2c86f80f88b063340baf76bee03867c5, type: 2}
+  - {fileID: 11400000, guid: 9de2890e8a198934ea93deecd0f85585, type: 2}
+  - {fileID: 11400000, guid: 2e6dbdb175b2de542a5bd5415db2bde2, type: 2}
+  - {fileID: 11400000, guid: 5e3ee8b2b591d384dbb9c08fa05e9a0f, type: 2}
   electricityUse: 1
   foodUse: 1
 --- !u!114 &1531676750

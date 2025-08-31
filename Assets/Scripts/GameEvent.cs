@@ -12,9 +12,12 @@ public class GameEvent : ScriptableObject
     public float sanityChange;
     public float electricityChange;
     public float foodChange;
-    
+    public float scienceProjectChange;
+    public float electricalProjectChange;
+    public float farmingProjectChange;
 
-  
+
+
 
 
 
@@ -40,7 +43,7 @@ public class GameEvent : ScriptableObject
     }
 
 
-    public void ApplyEvent(Stats player)
+    public void ApplyEvent(Stats player, Projects projects)
     {
         if (player != null)
         {
@@ -49,6 +52,13 @@ public class GameEvent : ScriptableObject
             player.ModifyElectricity(electricityChange);
             player.ModifyFood(foodChange);
 
+        }
+
+        if (projects != null)
+        {
+            if (scienceProjectChange != 0) projects.ModifyProjectProgress(Projects.projectprogress.science, scienceProjectChange);
+            if (electricalProjectChange != 0) projects.ModifyProjectProgress(Projects.projectprogress.electrical, electricalProjectChange);
+            if (farmingProjectChange != 0) projects.ModifyProjectProgress(Projects.projectprogress.farming, farmingProjectChange);
         }
     }
 }

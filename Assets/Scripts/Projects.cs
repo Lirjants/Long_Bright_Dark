@@ -400,6 +400,22 @@ public class Projects : MonoBehaviour
         }
     }
 
+    public void ModifyProjectProgress(projectprogress type, float amount)
+    {
+        switch (type)
+        {
+            case projectprogress.science:
+                scienceProject(amount); // already clamps to max
+                break;
+            case projectprogress.electrical:
+                electricalProject(amount);
+                break;
+            case projectprogress.farming:
+                farmingProject(amount);
+                break;
+        }
+    }
+
     // Update is called once per frame
     void Update()
 

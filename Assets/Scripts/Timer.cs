@@ -263,7 +263,7 @@ public class Timer : MonoBehaviour
         GameEvent chosenEvent = validEvents[index];
 
         Debug.Log("Event: " + chosenEvent.description);
-        chosenEvent.ApplyEvent(playerStats);
+        chosenEvent.ApplyEvent(playerStats, _projects);
         eventText.text = chosenEvent.description;   
     }
 

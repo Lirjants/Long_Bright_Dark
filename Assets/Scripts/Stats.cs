@@ -55,6 +55,7 @@ public class Stats : MonoBehaviour
         currentSanity = maxSanity;
         currentElectricity = maxElectricity;
         currentFood = maxFood;
+
     }
 
     // Update is called once per frame
