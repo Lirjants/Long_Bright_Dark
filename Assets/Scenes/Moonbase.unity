@@ -1452,7 +1452,6 @@ GameObject:
   - component: {fileID: 600906723}
   - component: {fileID: 600906724}
   - component: {fileID: 600906726}
-  - component: {fileID: 600906727}
   m_Layer: 0
   m_Name: ExerciseBike
   m_TagString: Untagged
@@ -1556,20 +1555,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &600906727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600906721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc302b554e0d3d48a7812d7f4aee706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 1531676749}
-  actionName: Exercise
 --- !u!1 &683192979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,6 +2744,7 @@ GameObject:
   - component: {fileID: 1531676748}
   - component: {fileID: 1531676750}
   - component: {fileID: 1531676749}
+  - component: {fileID: 1531676751}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2800,14 +2786,16 @@ MonoBehaviour:
   sanityLossPerDay: -10
   electricityLossPerDay: -5
   playerStats: {fileID: 1531676750}
-  _projects: {fileID: 0}
-  _textbox: {fileID: 0}
+  _projects: {fileID: 1531676751}
+  music: {fileID: 0}
+  _textbox: {fileID: 477820071}
   exerciseButton: {fileID: 0}
   farmButton: {fileID: 0}
   projectButton: {fileID: 0}
   eventText: {fileID: 477820069}
   gameOverText: {fileID: 0}
   endGameText: {fileID: 0}
+  aa: 
   possibleEvents:
   - {fileID: 11400000, guid: d6d6264a81f63824f9982e5744806d39, type: 2}
   - {fileID: 11400000, guid: 2c86f80f88b063340baf76bee03867c5, type: 2}
@@ -2836,6 +2824,31 @@ MonoBehaviour:
   sanityBarFiller: {fileID: 683192981}
   electricityBarFiller: {fileID: 1553086649}
   foodBarFiller: {fileID: 407742856}
+  music: {fileID: 0}
+--- !u!114 &1531676751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531676747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9697243de35deef4d9d3fd708a66cfdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incrementamount: 25
+  maxamount: 100
+  scienceProgress: 0
+  electricalProgress: 0
+  farmingProgress: 0
+  current: 0
+  aa: 
+  playerStats: {fileID: 1531676750}
+  _textbox: {fileID: 477820071}
+  scienceProjectName: Research Paper
+  electricalProjectName: Stabilize Power Grid
+  farmingProjectName: Greenhouse Upgrade
 --- !u!1 &1553086647
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3365,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1909473695}
   - component: {fileID: 1909473696}
+  - component: {fileID: 1909473698}
+  - component: {fileID: 1909473697}
   m_Layer: 0
   m_Name: ComputerTable
   m_TagString: Untagged
@@ -3392,6 +3407,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 1531676749}
   actionName: Project
+--- !u!23 &1909473697
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909473694}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1909473698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909473694}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 3, z: 1}
+  m_Center: {x: -3.5, y: 1, z: 0}
 --- !u!1 &1963762078
 GameObject:
   m_ObjectHideFlags: 0
