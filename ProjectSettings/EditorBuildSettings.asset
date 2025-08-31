@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1338aafa7b1f0cb4facbceb16c69a69b
   - enabled: 1
-    path: Assets/Scenes/RoomScene.unity
+    path: Assets/Scenes/Moonbase.unity
     guid: 01ba82a0dc7884244bda7d8d8c196e41
   m_configObjects: {}
